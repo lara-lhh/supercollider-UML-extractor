@@ -8,7 +8,7 @@ import shutil
 def get_sclang_path():
     path = shutil.which("sclang")
     if not path:
-        print("❌ No se encontró 'sclang' en tu sistema.")
+        print("   No se encontró 'sclang' en tu sistema.")
         print("   Asegúrate de tener SuperCollider instalado y 'sclang' en tu PATH.")
         print("   Puedes descargarlo desde: https://supercollider.github.io/")
         sys.exit(1)
@@ -40,7 +40,7 @@ printTree.({root_class});
             timeout=60
         )
         if result.returncode != 0:
-            print("❌ Error ejecutando sclang:")
+            print("Error ejecutando sclang:")
             print(result.stderr.decode())
             sys.exit(1)
         output = result.stdout.decode()
@@ -68,5 +68,5 @@ if __name__ == "__main__":
     sclang_path = get_sclang_path()
     root = sys.argv[1]
     relations = get_descendants_from_sclang(root, sclang_path)
-    generate_puml(relations, f"{root}_sclang_hierarchy.puml", root)
-    print(f"✅ Diagrama generado: {root}_sclang_hierarchy.puml")
+    generate_puml(relations, f"{root}_sclang_uml.puml", root)
+    print(f"Diagrama generado: {root}_sclang_uml.puml")
