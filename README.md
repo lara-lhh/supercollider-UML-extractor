@@ -2,7 +2,7 @@
 # SuperCollider UML Extractor
 
 Este proyecto permite generar automáticamente diagramas UML de clases en SuperCollider, 
-partiendo de la jerarquía de clases extraída usando el propio lenguaje `sclang`.
+partiendo de la jerarquía de clases extraída usando el propio lenguaje `sclang`. Util para documentación, análisis del sistema o exploración de la arquitectura de SuperCollider
 
 ##  Requisitos
 
